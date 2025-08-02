@@ -1,0 +1,24 @@
+body {
+  font-family: 'Fira Code', sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.content {
+  color: #111827;
+  font-size: 2.5rem;
+  text-align: center;
+}
+  
+.button1 { 
+background-color: #3b82f6; 
+border: none;
+color: white; 
+padding: 15px 32px; 
+text-align: center; 
+text-decoration: none; 
+display: inline-block; 
+font-size: 16px; 
+margin: 4px 2px; 
+cursor: pointer; 
+}
