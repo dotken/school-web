@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
+        // First, handle any query parameters
         if (window.location.search) {
             var cleanUrl = window.location.protocol + "//" + 
                           window.location.host + 
                           window.location.pathname;
             window.history.replaceState({}, document.title, cleanUrl);
+        }
+        
+        // Then, handle incomplete paths
+        var pathSegmentsToKeep = 1;
+        var l = window.location;
+        if (l.pathname.split('/')[1] !== 'school-web') {
+            l.replace(
+                l.protocol + '//' + l.hostname + 
+                '/school-web/'
+            );
         }
     </script>
     <style>
