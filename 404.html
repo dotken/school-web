@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        if (window.location.search) {
+            var cleanUrl = window.location.protocol + "//" + 
+                          window.location.host + 
+                          window.location.pathname;
+            window.history.replaceState({}, document.title, cleanUrl);
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f4f6;
+        }
+        .redirect-message {
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-message">
+        Redirecting to homepage...
+    </div>
+</body>
+</html>
