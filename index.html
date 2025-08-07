@@ -1,88 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Google Fonts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="page/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-    
-    <!-- External CSS -->
-    <link rel="stylesheet" href="page/index.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
 
-    <title>School Website</title>
 </head>
 <body>
-    <header class="site-header">
-        <h1>School Website</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">🚀</div>
+                <h2>DotDotFun</h2>
+            </div>
+        </div>
     </header>
 
-    <div>
-        <h1 class="content">Welcome to our School website.</h1>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to Our Website</h1>
+                <p class="hero-subtitle">Made with just a phone</p>
+                <button class="pushable pixel-corners--wrapper" style="--border-color:#660018; --border-size: 1px;">
+  <span class="front pixel-corners--wrapper" style="--border-color: #660018; --border-size: 1px;">
+    Push me
+  </span>
+</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <p class="team-intro">We are a team of 3, each contributing to different aspects of this project.</p>
+            
+            
+<!-- wrap all cards in one section/container -->
+    <div class="course-card pixel-corners--wrapper" style="--border-color:#b8bab4;">
+      <div class="card-image python-scene"></div>
+      <div class="card-content">
+        <div class="course-label">KL. Bullirse</div>
+        <h3 class="course-title">Developer</h3>
+        <p class="course-description">
+          Role Description Role Description Role Description Role Description
+        </p>
+
+      </div>
+    </div>
+  
+
+  <!-- HTML card -->
+
+    <div class="course-card pixel-corners--wrapper" style="--border-color:#b8bab4;">
+      <div class="card-image html-scene"></div>
+      <div class="card-content">
+        <div class="course-label">F. Tabuena</div>
+        <h3 class="course-title">Role</h3>
+        <p class="course-description">
+          Role Description Role Description Role Description Role Description
+        </p>
+      </div>
     </div>
 
-    <div>
-        <button class="button1">Learn More</button>
-    </div>
 
-    <div class="header finisher-header" style="width: 100%; height: 300px;">
-        Logo, navigation, etc.
-    </div>
+  <!-- CSS card -->
 
-    <footer class="site-footer">
-        <p>&copy; 2025 School Website. All rights reserved.</p>
+<div class="course-card pixel-corners--wrapper" style="--border-color:#b8bab4;">
+      <div class="card-image css-scene"></div>
+      <div class="card-content">
+        <div class="course-label">L. Nañoz</div>
+        <h3 class="course-title">Role</h3>
+        <p class="course-description">
+          Role Description Role Description Role Description Role Description
+        </p>
+      </div>
+      <span class="card-shadow"> 
+      </span>
+    </div>
+    
+
+</section>
+
+<div class="course-card>
+<section class="projects">
+    <div class="container">
+        <h2 class="section-title">What This Website Is All About</h2>
+        <p class="project-description">
+            This website was created for our school project to showcase our ideas, research, and creativity. It serves as a platform to present our topic, share information, and make learning more engaging through interactive and visually appealing content.
+
+        </p>
+    </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>[Your Group Name] • [School Name] • 2025</p>
+        </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="page/finisher-header.es5.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    new FinisherHeader({
-        "count": 10,
-        "size": {
-            "min": 5,
-            "max": 40,
-            "pulse": 0
-        },
-        "speed": {
-            "x": {
-                "min": 0,
-                "max": 0.8
-            },
-            "y": {
-                "min": 0,
-                "max": 0.2
-            }
-        },
-        "colors": {
-            "background": "#f3f4f6",
-            "particles": [
-                "#00bfa6",
-                "#579dff",
-                "#ffd56b",
-                "#acacff",
-                "#b6f0e3"
-            ]
-        },
-        "blending": "none",
-        "opacity": {
-            "center": 1,
-            "edge": 1
-        },
-        "skew": -1,
-        "shapes": [
-            "c",
-            "s",
-            "t"
-        ]
-    });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
