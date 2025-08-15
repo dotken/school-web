@@ -6,12 +6,20 @@
     box-sizing: border-box;
     }
 body {
-    font-family: 'Inter', sans-serif;
+    
+    
     line-height: 1.6;
-    background-color: ##fcffff;
+    background-color: #white;
     color: #2d3748;
+    -webkit-tap-highlight-color: transparent;
+  
     }
  
+ .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 
 
@@ -42,30 +50,35 @@ body {
 }
 
 .logo h2 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 800;
-    color: #2d3748;
+    color: #0B1B3A;
     font-family: 'Press Start 2P', sans-serif;
+    
 }
 
 /* HERO SECTION */
 .hero {
-    background-color: #0046FF;
+    background-color: #1E90FF;
+    background-size: cover; /* makes it fill the hero area */
     padding: 8rem 0;
     text-align: center;
+    
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
     font-weight: 800;
-    color: #ffffff;
+    color: white;
     margin-bottom: 1.5rem;
     font-family: 'Press Start 2P', sans-serif;
+
+  
 }
 
 .hero-subtitle {
     font-size: 1.3rem;
-    color: #ffffff;
+    color: #FFF9F0;
     margin-bottom: 3rem;
     font-weight: 500;
     opacity: 0.9;
@@ -73,36 +86,47 @@ body {
 }
 
 
-
-
-
 .pushable {
-    
-    background: #b30030;
-    border-radius: 12px;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    outline-offset: 4px;
-    
-  }
-  .front {
- 
-  font-family: 'Minecraftia', sans-serif;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
-    display: block;
-    padding: 12px 42px;
-    border-radius: 12px;
-    font-size: 1.25rem;
-    background: #ff0044;
-    color: white;
-    transform: translateY(-6px);
-    
-  }
+  height: 42px;
+  background: #b2002f;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  box-shadow:
+    2px 0 #b2002f, -2px 0 #b2002f, 0 -2px #b2002f, 0 2px #b2002f,
+    4px 0 #69001d, -4px 0 #69001d, 0 -4px #69001d, 0 4px #69001d,
+    0 0 0 2px #69001d;
+  display: inline-block;
+}
 
-  .pushable:active .front {
-    transform: translateY(-2px);
-  }
+.front {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  display: block;
+  padding: 12px 42px;
+  font-family: 'Pixelon',sans-serif;
+  font-size: 1.25rem;
+  background: #ff0044;
+  color: white;
+  transform: translateY(-6px);
+  transition: transform 0.1s ease;
+  box-shadow:
+    2px 0 #ff0044, -2px 0 #ff0044, 0 -2px #ff0044, 0 2px #ff0044,
+    4px 0 #69001d, -4px 0 #69001d, 0 -4px #69001d, 0 4px #69001d,
+    0 0 0 2px #69001d;
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+
+
+
+
+
+   
+
+/* container */
 
 
 
@@ -117,12 +141,12 @@ section {
     font-weight: 500;
     text-align: center;
     margin-bottom: 1rem;
-    color: #2d3748;
+    color: #0B1B3A;
   }
 
 .team-intro {
     text-align: center;
-    color: #64748b;
+    color: #1A2C4E;
     font-size: 1.2rem;
     margin-bottom: 4rem;
     font-weight: 500;
@@ -135,126 +159,135 @@ section {
 }
 
 
+
 .pixel-corners,
 .pixel-corners--wrapper {
-  --border-size: 1px;
-  
-  clip-path: polygon(0px calc(100% - calc(var(--border-size) * 4)),
-    var(--border-size) calc(100% - calc(var(--border-size) * 4)),
-    var(--border-size) calc(100% - calc(var(--border-size) * 2)),
-    calc(var(--border-size) * 2) calc(100% - calc(var(--border-size) * 2)),
-    calc(var(--border-size) * 2) calc(100% - var(--border-size)),
-    calc(var(--border-size) * 4) calc(100% - var(--border-size)),
-    calc(var(--border-size) * 4) 100%,
-    calc(100% - calc(var(--border-size) * 4)) 100%,
-    calc(100% - calc(var(--border-size) * 4)) calc(100% - var(--border-size)),
-    calc(100% - calc(var(--border-size) * 2)) calc(100% - var(--border-size)),
-    calc(100% - calc(var(--border-size) * 2)) calc(100% - calc(var(--border-size) * 2)),
-    calc(100% - var(--border-size)) calc(100% - calc(var(--border-size) * 2)),
-    calc(100% - var(--border-size)) calc(100% - calc(var(--border-size) * 4)),
-    100% calc(100% - calc(var(--border-size) * 4)),
-    100% calc(var(--border-size) * 4),
-    calc(100% - var(--border-size)) calc(var(--border-size) * 4),
-    calc(100% - var(--border-size)) calc(var(--border-size) * 2),
-    calc(100% - calc(var(--border-size) * 2)) calc(var(--border-size) * 2),
-    calc(100% - calc(var(--border-size) * 2)) var(--border-size),
-    calc(100% - calc(var(--border-size) * 4)) var(--border-size),
-    calc(100% - calc(var(--border-size) * 4)) 0px,
-    calc(var(--border-size) * 4) 0px,
-    calc(var(--border-size) * 4) var(--border-size),
-    calc(var(--border-size) * 2) var(--border-size),
-    calc(var(--border-size) * 2) calc(var(--border-size) * 2),
-    var(--border-size) calc(var(--border-size) * 2),
-    var(--border-size) calc(var(--border-size) * 4),
-    0px calc(var(--border-size) * 4));
+  clip-path: polygon(
+    0px calc(100% - 6px),
+    2px calc(100% - 6px),
+    2px calc(100% - 4px),
+    4px calc(100% - 4px),
+    4px calc(100% - 2px),
+    6px calc(100% - 2px),
+    6px 100%,
+    calc(100% - 6px) 100%,
+    calc(100% - 6px) calc(100% - 2px),
+    calc(100% - 4px) calc(100% - 2px),
+    calc(100% - 4px) calc(100% - 4px),
+    calc(100% - 2px) calc(100% - 4px),
+    calc(100% - 2px) calc(100% - 6px),
+    100% calc(100% - 6px),
+    100% 6px,
+    calc(100% - 2px) 6px,
+    calc(100% - 2px) 4px,
+    calc(100% - 4px) 4px,
+    calc(100% - 4px) 2px,
+    calc(100% - 6px) 2px,
+    calc(100% - 6px) 0px,
+    6px 0px,
+    6px 2px,
+    4px 2px,
+    4px 4px,
+    2px 4px,
+    2px 6px,
+    0px 6px
+  );
   position: relative;
 }
+
 .pixel-corners {
-  border: calc(var(--border-size) * 2) solid transparent;
+  border: 2px solid transparent;
 }
+
 .pixel-corners--wrapper {
   width: fit-content;
   height: fit-content;
 }
+
 .pixel-corners--wrapper .pixel-corners {
   display: block;
-  clip-path: polygon(calc(var(--border-size) * 2) calc(var(--border-size) * 5),
-    calc(var(--border-size) * 3) calc(var(--border-size) * 5),
-    calc(var(--border-size) * 3) calc(var(--border-size) * 3),
-    calc(var(--border-size) * 5) calc(var(--border-size) * 3),
-    calc(var(--border-size) * 5) calc(var(--border-size) * 2),
-    calc(100% - calc(var(--border-size) * 5)) calc(var(--border-size) * 2),
-    calc(100% - calc(var(--border-size) * 5)) calc(var(--border-size) * 3),
-    calc(100% - calc(var(--border-size) * 3)) calc(var(--border-size) * 3),
-    calc(100% - calc(var(--border-size) * 3)) calc(var(--border-size) * 5),
-    calc(100% - calc(var(--border-size) * 2)) calc(var(--border-size) * 5),
-    calc(100% - calc(var(--border-size) * 2)) calc(100% - calc(var(--border-size) * 5)),
-    calc(100% - calc(var(--border-size) * 3)) calc(100% - calc(var(--border-size) * 5)),
-    calc(100% - calc(var(--border-size) * 3)) calc(100% - calc(var(--border-size) * 3)),
-    calc(100% - calc(var(--border-size) * 5)) calc(100% - calc(var(--border-size) * 3)),
-    calc(100% - calc(var(--border-size) * 5)) calc(100% - calc(var(--border-size) * 2)),
-    calc(var(--border-size) * 5) calc(100% - calc(var(--border-size) * 2)),
-    calc(var(--border-size) * 5) calc(100% - calc(var(--border-size) * 3)),
-    calc(var(--border-size) * 3) calc(100% - calc(var(--border-size) * 3)),
-    calc(var(--border-size) * 3) calc(100% - calc(var(--border-size) * 5)),
-    calc(var(--border-size) * 2) calc(100% - calc(var(--border-size) * 5)));
+  clip-path: polygon(
+    6px 6px,
+    8px 6px,
+    8px 4px,
+    10px 4px,
+    10px 2px,
+    calc(100% - 10px) 2px,
+    calc(100% - 10px) 4px,
+    calc(100% - 8px) 4px,
+    calc(100% - 8px) 6px,
+    calc(100% - 6px) 6px,
+    calc(100% - 6px) calc(100% - 6px),
+    calc(100% - 8px) calc(100% - 6px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 10px) calc(100% - 8px),
+    calc(100% - 10px) calc(100% - 10px),
+    10px calc(100% - 10px),
+    10px calc(100% - 8px),
+    8px calc(100% - 8px),
+    8px calc(100% - 6px),
+    6px calc(100% - 6px)
+  );
 }
+
 .pixel-corners::after,
 .pixel-corners--wrapper::after {
   content: "";
   position: absolute;
-  clip-path: polygon(0px calc(100% - calc(var(--border-size) * 4)),
-    var(--border-size) calc(100% - calc(var(--border-size) * 4)),
-    var(--border-size) calc(100% - calc(var(--border-size) * 2)),
-    calc(var(--border-size) * 2) calc(100% - calc(var(--border-size) * 2)),
-    calc(var(--border-size) * 2) calc(100% - var(--border-size)),
-    calc(var(--border-size) * 4) calc(100% - var(--border-size)),
-    calc(var(--border-size) * 4) 100%,
-    calc(100% - calc(var(--border-size) * 4)) 100%,
-    calc(100% - calc(var(--border-size) * 4)) calc(100% - var(--border-size)),
-    calc(100% - calc(var(--border-size) * 2)) calc(100% - var(--border-size)),
-    calc(100% - calc(var(--border-size) * 2)) calc(100% - calc(var(--border-size) * 2)),
-    calc(100% - var(--border-size)) calc(100% - calc(var(--border-size) * 2)),
-    calc(100% - var(--border-size)) calc(100% - calc(var(--border-size) * 4)),
-    100% calc(100% - calc(var(--border-size) * 4)),
-    100% calc(var(--border-size) * 4),
-    calc(100% - var(--border-size)) calc(var(--border-size) * 4),
-    calc(100% - var(--border-size)) calc(var(--border-size) * 2),
-    calc(100% - calc(var(--border-size) * 2)) calc(var(--border-size) * 2),
-    calc(100% - calc(var(--border-size) * 2)) var(--border-size),
-    calc(100% - calc(var(--border-size) * 4)) var(--border-size),
-    calc(100% - calc(var(--border-size) * 4)) 0px,
-    calc(var(--border-size) * 4) 0px,
-    calc(var(--border-size) * 4) var(--border-size),
-    calc(var(--border-size) * 2) var(--border-size),
-    calc(var(--border-size) * 2) calc(var(--border-size) * 2),
-    var(--border-size) calc(var(--border-size) * 2),
-    var(--border-size) calc(var(--border-size) * 4),
-    0px calc(var(--border-size) * 4),
+  clip-path: polygon(
+    0px calc(100% - 6px),
+    2px calc(100% - 6px),
+    2px calc(100% - 4px),
+    4px calc(100% - 4px),
+    4px calc(100% - 2px),
+    6px calc(100% - 2px),
+    6px 100%,
+    calc(100% - 6px) 100%,
+    calc(100% - 6px) calc(100% - 2px),
+    calc(100% - 4px) calc(100% - 2px),
+    calc(100% - 4px) calc(100% - 4px),
+    calc(100% - 2px) calc(100% - 4px),
+    calc(100% - 2px) calc(100% - 6px),
+    100% calc(100% - 6px),
+    100% 6px,
+    calc(100% - 2px) 6px,
+    calc(100% - 2px) 4px,
+    calc(100% - 4px) 4px,
+    calc(100% - 4px) 2px,
+    calc(100% - 6px) 2px,
+    calc(100% - 6px) 0px,
+    6px 0px,
+    6px 2px,
+    4px 2px,
+    4px 4px,
+    2px 4px,
+    2px 6px,
+    0px 6px,
     0px 50%,
-    calc(var(--border-size) * 2) 50%,
-    calc(var(--border-size) * 2) calc(var(--border-size) * 5),
-    calc(var(--border-size) * 3) calc(var(--border-size) * 5),
-    calc(var(--border-size) * 3) calc(var(--border-size) * 3),
-    calc(var(--border-size) * 5) calc(var(--border-size) * 3),
-    calc(var(--border-size) * 5) calc(var(--border-size) * 2),
-    calc(100% - calc(var(--border-size) * 5)) calc(var(--border-size) * 2),
-    calc(100% - calc(var(--border-size) * 5)) calc(var(--border-size) * 3),
-    calc(100% - calc(var(--border-size) * 3)) calc(var(--border-size) * 3),
-    calc(100% - calc(var(--border-size) * 3)) calc(var(--border-size) * 5),
-    calc(100% - calc(var(--border-size) * 2)) calc(var(--border-size) * 5),
-    calc(100% - calc(var(--border-size) * 2)) calc(100% - calc(var(--border-size) * 5)),
-    calc(100% - calc(var(--border-size) * 3)) calc(100% - calc(var(--border-size) * 5)),
-    calc(100% - calc(var(--border-size) * 3)) calc(100% - calc(var(--border-size) * 3)),
-    calc(100% - calc(var(--border-size) * 5)) calc(100% - calc(var(--border-size) * 3)),
-    calc(100% - calc(var(--border-size) * 5)) calc(100% - calc(var(--border-size) * 2)),
-    calc(var(--border-size) * 5) calc(100% - calc(var(--border-size) * 2)),
-    calc(var(--border-size) * 5) calc(100% - calc(var(--border-size) * 3)),
-    calc(var(--border-size) * 3) calc(100% - calc(var(--border-size) * 3)),
-    calc(var(--border-size) * 3) calc(100% - calc(var(--border-size) * 5)),
-    calc(var(--border-size) * 2) calc(100% - calc(var(--border-size) * 5)),
-    calc(var(--border-size) * 2) 50%,
-    0px 50%);
+    2px 50%,
+    2px 6px,
+    4px 6px,
+    4px 4px,
+    6px 4px,
+    6px 2px,
+    calc(100% - 6px) 2px,
+    calc(100% - 6px) 4px,
+    calc(100% - 4px) 4px,
+    calc(100% - 4px) 6px,
+    calc(100% - 2px) 6px,
+    calc(100% - 2px) calc(100% - 6px),
+    calc(100% - 4px) calc(100% - 6px),
+    calc(100% - 4px) calc(100% - 4px),
+    calc(100% - 6px) calc(100% - 4px),
+    calc(100% - 6px) calc(100% - 2px),
+    6px calc(100% - 2px),
+    6px calc(100% - 4px),
+    4px calc(100% - 4px),
+    4px calc(100% - 6px),
+    2px calc(100% - 6px),
+    2px 50%,
+    0px 50%
+  );
   top: 0;
   bottom: 0;
   left: 0;
@@ -263,8 +296,9 @@ section {
   display: block;
   pointer-events: none;
 }
+
 .pixel-corners::after {
-  margin: calc(-1 * calc(var(--border-size) * 2));
+  margin: -2px;
 }
 
 
@@ -277,7 +311,12 @@ section {
    overflow: hidden;
    margin-bottom: 1.5rem;
    display: block;
+   background-color: #fcffff;
    }
+
+ 
+ 
+
 
 
         .card-image {
@@ -291,7 +330,7 @@ section {
             image-rendering: -moz-crisp-edges;
             image-rendering: crisp-edges;
             overflow: hidden;
-            border-bottom: 2px solid #b8bab4;
+            border-bottom: 2px solid #5a5a5a;
         }
 
         .card-content {
@@ -301,7 +340,7 @@ section {
         .course-label {
             font-size: 0.75rem;
             font-weight: 600;
-            color: #696969;
+            color: #1A2C4E;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 0.5rem;
@@ -310,52 +349,55 @@ section {
         .course-title {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #36454F;
+            color: #0B1B3A;
             margin-bottom: 0.75rem;
-            font-family: Minecraftia;
+            font-family: 'Pixelon', sans-serif;
         }
 
         .course-description {
             font-size: 0.95rem;
-            color: #696969;
+            color: #1A2C4E;
             line-height: 1.5;
             margin-bottom: 1.25rem;
 
 
    
     }
-
-
-/* PROJECTS SECTION */
-
-/* PROJECTS SECTION */
-.projects {
-    background-color: #ffffff;
+    .card-layer {
+  position: relative;
 }
 
-.projects .section-title {
+.card-back {
+  background-color: #E9EBF1;
+  position: absolute;
+  top: 4px;
+  left: 0px;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+
+
+.section-title {
     margin-bottom: 2rem;
     font-family: "Press Start 2P";
- font-size: 1.3rem;
+ font-size: 1rem;
+ color: #0B1B3A;
+ margin: 20px;
 }
 
 .project-description {
-    color: #64748b;
+    color: #1A2C4E;
     line-height: 1.6;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
     max-width: 800px;
+    margin: 22px;
 }
 
-        .span1 { 
-            display: block;
-    padding: 12px 42px;
-    border-radius: 12px;
-    background: #ff0044;
-    outline-offset: 4px;
-    
-    }
+
 
 
 /* FOOTER */
@@ -383,9 +425,7 @@ section {
     
 
     
-    .project-showcase {
-        padding: 3rem 2rem;
-    }
+
 }
 
 @media (max-width: 480px) {
