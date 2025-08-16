@@ -4,14 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="page/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Press+Start+2P&display=swap" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/pixelon" rel="stylesheet">
-<link href="https://raw.githubusercontent.com/linusg/serenityos-emoji-font/refs/heads/main/SerenityOS-Emoji.css" rel="stylesheet">
+
                 
+                
+   <script> 
+   
+   var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+   </script>             
 
 </head>
 <body>
@@ -29,14 +89,20 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Welcome to Our Website</h1>
+              <h1 class="typewrite" data-period="2000" data-type='[ "Welcome", "Enjoy"]'></h1>
+                
                 <p class="hero-subtitle">Made with just a phone</p>
 
 
 <!-- HTML !-->
-<button class="pushable">
+<button class="pushable" onclick="goNextPage()">
   <span class="front"> Push me </span>
 </button>
+<script>
+  function goNextPage() {
+    window.location.href = "index2.html"; // change to your page
+  }
+</script>
             
 
             </div>
@@ -61,9 +127,9 @@
     <div class="card-image python-scene"></div>
     <div class="card-content">
       <div class="course-label">KL. Bullirse</div>
-      <h3 class="course-title">Developer</h3>
+      <h3 class="course-title">Web Developer</h3>
       <p class="course-description">
-        Role Description Role Description Role Description Role Description
+        The hero who slings code instead of webs, making the whole site swing smoothly.
       </p>
     </div>
   </div>
@@ -78,9 +144,9 @@
       <div class="card-image html-scene"></div>
       <div class="card-content">
         <div class="course-label">F. Tabuena</div>
-        <h3 class="course-title">Role</h3>
+        <h3 class="course-title">Graphic Designer</h3>
         <p class="course-description">
-          Role Description Role Description Role Description Role Description
+          Adds just enough color and style to make the site feel alive.
         </p>
       </div>
     </div>
@@ -95,9 +161,9 @@
       <div class="card-image css-scene"></div>
       <div class="card-content">
         <div class="course-label">L. Nañoz</div>
-        <h3 class="course-title">Role</h3>
+        <h3 class="course-title">Content Writer</h3>
         <p class="course-description">
-          Role Description Role Description Role Description Role Description
+          Turns plain text into lines that actually feel fun to read.
         </p>
       </div>
       <span class="card-shadow"> 
@@ -111,7 +177,7 @@
 
         <h2 class="section-title">What This Website Is All About</h2>
         <p class="project-description">
-            This website was created for our school project to showcase our ideas, research, and creativity. It serves as a platform to present our topic, share information, and make learning more engaging through interactive and visually appealing content.
+            This website is a school project made to showcase our creativity and teamwork. It’s simple, a little playful, and built with our own mix of design, writing, and ideas. Every part of it reflects what we’ve learned and how we worked together from brainstorming concepts to putting everything online. It’s not perfect, but it’s ours, and that makes it something special.
         </p>
     </div>
 
