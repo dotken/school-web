@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page 3</title>
+  <link rel="stylesheet" href="page/index4.css"/>
+<link rel="stylesheet" href="page/prism.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/pixelon" rel="stylesheet">
+
+
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <div class="logo-icon">🚀</div>
+     
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+  </div>
+</header>
+    
+    <main>
+        <h1>3. Backend</h1>
+
+        <h2 class="tag">Making it work</h2> 
+
+        <p>
+            The backend was actually the easiest part of making this website, but only because it’s hosted for free by <a href="https://github.com/dotken/school-web" style="color: #FF4FD8;">github</a>. That means we didn’t have to set up any real server or database ourselves. Without the free hosting, we would have needed proper server setup, databases, and all that extra stuff, which is way more complicated.
+        </p>
+
+<p> Since we used the free host, the backend just makes sure pages and buttons work, and everything runs smoothly. It was simple enough to focus on getting the website working without worrying about the hard server stuff.
+</p>
+
+
+        <h2 class="tag">Ex. Making buttons function</h2> 
+
+        <p>Making buttons work might sound tricky, but for our website, it’s pretty straightforward. Each button needs a tiny bit of JavaScript to do its job like opening a page, showing a message, or moving you to another section. Think of it like giving the button a little brain so it knows what to do when you click it</p>
+
+
+<p> anchor</p>
+<pre><code class="language-html">
+<!-- HTML -->
+  <&lt;!-- HTML --&gt;
+&lt;button class=&quot;button-name&quot; onclick=&quot;goNextPage&quot;&gt;Click&lt;/button&gt;
+&lt;a href=&quot;page.html&quot; class=&quot;anchor-name&quot;&gt;Click&lt;/a&gt;
+  
+</code></pre>
+
+<p>Literally all you have to do is just add a function to go to the next page/html.</p>
+<p>You can use anchor too, but its buggy on with complex button designs. Otherwise just use button with simple script. </p>
+
+<pre><code class="language-JavaScript">  
+        
+  function goNextPage1() {
+    window.location.href = "page.html";
+  }
+
+</code></pre>
+
+        <p><b><i>Interactive example:</i></b> </p>
+        
+<div class="container-button" style="
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  height: 200px;           
+">
+  <button class="button-name" 
+          style="width: 90px; height: 60px;" 
+          onclick="goNextPage1()">
+    Click
+  </button>  
+</div>
+
+<script>
+  function goNextPage1() {
+    window.location.href = "page.html";
+  }
+</script>
+<p><b><i>Obviously this button wont work because page.html doesnt exist in the  folder lol😂</i></b></p>
+
+
+        
+
+
+        
+
+        
+
+    </main>
+    
+    <div class="buttons">
+        <button class="pushable" onclick="goNextPage()">
+            <span class="front">
+                <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M16 5v2h-2V5h2zm-4 4V7h2v2h-2zm-2 2V9h2v2h-2zm0 2H8v-2h2v2zm2 2v-2h-2v2h2zm0 0h2v2h-2v-2zm4 4v-2h-2v2h2z" fill="rgba(0,0,0,0.3)" transform="translate(2,2)"/>
+                    <path d="M16 5v2h-2V5h2zm-4 4V7h2v2h-2zm-2 2V9h2v2h-2zm0 2H8v-2h2v2zm2 2v-2h-2v2h2zm0 0h2v2h-2v-2zm4 4v-2h-2v2h2z" fill="currentColor"/>
+                </svg>
+            </span>
+        </button>
+        
+        <script>
+  function goNextPage() {
+    window.location.href = "index3.html";
+  }
+</script>
+
+        <button class="pushable" onclick="goPrevPage()">
+            <span class="front">
+                <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M8 5v2h2V5H8zm4 4V7h-2v2h2zm2 2V9h-2v2h2zm0 2h2v-2h-2v2zm-2 2v-2h2v2h-2zm0 0h-2v2h2v-2zm-4 4v-2h2v2H8z" fill="rgba(0,0,0,0.3)" transform="translate(2,2)"/>
+                    <path d="M8 5v2h2V5H8zm4 4V7h-2v2h2zm2 2V9h-2v2h2zm0 2h2v-2h-2v2zm-2 2v-2h2v2h-2zm0 0h-2v2h2v-2zm-4 4v-2h2v2H8z" fill="currentColor"/>
+                </svg>
+            </span>
+        </button>
+    </div>
+        <script>
+  function goPrevPage() {
+    window.location.href = "index5.html";
+  }
+</script>
+
+
+<script src="page/prism.js"></script>
+
+    
+
+</body>
+</html>
