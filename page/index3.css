@@ -132,6 +132,27 @@ p {
 
 
 
+.divvy-mom {
+    text-align: center; /* centers the block inside */
+}
+
+.divvy {
+    display: inline-block; /* needed for text-align to work */
+    width: 150px;
+    height: 80px;
+    background-color: #1E90FF;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    box-shadow:
+        2px 0 #FF4FD8, -2px 0 #FF4FD8, 0 -2px #FF4FD8, 0 2px #FF4FD8,
+        4px 0 #4FE0B0, -4px 0 #4FE0B0, 0 -4px #4FE0B0, 0 4px #4FE0B0,
+        0 0 0 2px #4FE0B0;
+}
+
+
 
 
 .buttons {
