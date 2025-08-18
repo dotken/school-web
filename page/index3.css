@@ -88,69 +88,147 @@ body {
     width: 0%;
   }
   100% {
-    width: 33.33%;
-  }
-}
-main {
-  padding: 1rem; 
-  flex: 1 0 auto; 
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Headings */
-h1 {
-  font-family: 'Press Start 2P';
-  color: #0B1B3A;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  letter-spacing: 0.04em;
-}
+        body {
+            line-height: 1.6;
+            background-color: white;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-.tag::before {
-  content: "#";
-  margin: 10px;
-  color: #1E90FF;
-  margin-right: 8px;
-  font-weight: bold;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-h2 {
-  font-weight: bold;
-  font-size: 1.4rem;
-  margin: 1.5rem 0 1rem;
-  color: #0B1B3A;
-  font-family: 'Pixelon', Sans-Serif;
-}
+        .header {
+            margin-top: 8px;
+            border-bottom: 2px solid #5a5a5a;
+            height: 55px;
+        }
 
-/* Paragraphs */
-p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  color: #101010;
-  font-family: "Nunito Sans", Sans-Serif;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background-color: #ff6b6b;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
 
+        .progress-bar {
+            width: 250px; 
+            height: 20px;
+            background-color: #1a1a2e;
+            overflow: hidden;
+            margin-left: 10px;
+            margin-right: 4px;
+            box-shadow:
+                2px 0 #16213e, -2px 0 #16213e, 0 -2px #16213e, 0 2px #16213e,
+                4px 0 #0f0f23, -4px 0 #0f0f23, 0 -4px #0f0f23, 0 4px #0f0f23,
+                0 0 0 2px #0f0f23,
+                inset 2px 2px 0 0 #16213e,
+                inset -2px -2px 0 0 #0a0a15;
+        }
 
+        .progress {
+            width: 0%; 
+            height: 100%;
+            background-color: #ff0044;
+            animation: fillProgress 2s ease-out forwards;
+            box-shadow: 
+                inset 2px 2px 0 0 #ff6699,
+                inset -2px -2px 0 0 #b2002f;
+        }
 
-}
+        @keyframes fillProgress {
+            0% { width: 0%; }
+            100% { width: 33.33%; }
+        }
 
-.divvy {
-    display: inline-block; /* needed for text-align to work */
-    width: 150px;
-    height: 80px;
-    background-color: #1E90FF;
-    color: white;
-    text-align: center;
-    line-height: 80px;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 12px;
-    box-shadow:
-        2px 0 #FF4FD8, -2px 0 #FF4FD8, 0 -2px #FF4FD8, 0 2px #FF4FD8,
-        4px 0 #4FE0B0, -4px 0 #4FE0B0, 0 -4px #4FE0B0, 0 4px #4FE0B0,
-        0 0 0 2px #4FE0B0;
-  margin-bottom: 50px;
-}
+        main {
+            padding: 1rem; 
+            flex: 1 0 auto; 
+        }
+
+        h1 {
+            font-family: 'Press Start 2P';
+            color: #0B1B3A;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.04em;
+        }
+
+        .tag::before {
+            content: "#";
+            margin: 10px;
+            color: #1E90FF;
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem;
+            color: #0B1B3A;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.9rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #101010;
+            font-family: "Nunito Sans", sans-serif;
+        }
+
+        .divvy-mom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            width: 100%;
+        }
+
+        .divvy {
+            width: 150px;
+            height: 80px;
+            background-color: #1E90FF;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 12px;
+            box-shadow:
+                2px 0 #FF4FD8, -2px 0 #FF4FD8, 0 -2px #FF4FD8, 0 2px #FF4FD8,
+                4px 0 #4FE0B0, -4px 0 #4FE0B0, 0 -4px #4FE0B0, 0 4px #4FE0B0,
+                0 0 0 2px #4FE0B0;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+        }
+
+        .divvy:hover {
+            transform: scale(1.05);
+        }
 
 
 
